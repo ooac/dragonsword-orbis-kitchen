@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search DragonSword: Awakening cooking recipes by dish, ingredient, method, or combat use.">
+  <title>Orbis Kitchen — DragonSword: Awakening Recipes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fraunces:opsz,wght@9..144,600;9..144,750&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Orbis Kitchen home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 8h22l-3 12a9 9 0 0 1-6 6v8h8v6H14v-6h8v-8a9 9 0 0 1-6-6L13 8Z"/><path d="M17 14h14M17 19h14"/></svg>
+      <span>ORBIS<br>KITCHEN</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#recipes">Recipes</a>
+      <a href="#use-cases">Best food</a>
+      <a href="#ingredients">Ingredients</a>
+    </nav>
+    <a class="steam-link" href="https://store.steampowered.com/app/4570720/DragonSword__Awakening/" target="_blank" rel="noreferrer">Official game <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">FIELD GUIDE 01 / COOKING</p>
+        <h1>Cook for the fight<br><em>you are about to enter.</em></h1>
+        <p class="lede">A fast, searchable cooking reference for DragonSword: Awakening. Match the method, ingredient group, and quantity before spending rare materials.</p>
+        <a class="primary-action" href="#recipes">Find a recipe
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12h14m-5-5 5 5-5 5"/></svg>
+        </a>
+      </div>
+      <div class="hero-art" aria-label="DragonSword Awakening key art">
+        <img src="assets/dragonsword-header.jpg" alt="DragonSword: Awakening characters">
+        <span class="art-label">CONTINENT OF ORBIS<br>COOKBOOK NOTES</span>
+      </div>
+    </section>
+
+    <section class="method-strip" aria-label="Cooking method summary">
+      <article><span>01</span><div><strong>GRILLING</strong><p>Immediate recovery and sustained healing.</p></div></article>
+      <article><span>02</span><div><strong>BOILING</strong><p>Resurrection dishes and long team buffs.</p></div></article>
+      <article><span>03</span><div><strong>SLICE</strong><p>Cleansing, utility, and movement support.</p></div></article>
+    </section>
+
+    <section class="recipe-section" id="recipes">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE WORKING CODEX</p><h2>Recipe finder</h2></div>
+        <p>Start with the effect you need. Then copy the method and quantities together.</p>
+      </div>
+      <div class="recipe-toolbar">
+        <label class="search-field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
+          <span class="sr-only">Search recipes</span>
+          <input id="recipe-search" type="search" placeholder="Search dish or ingredient…">
+        </label>
+        <div class="filters" aria-label="Recipe method filters">
+          <button class="filter is-active" data-method="all">All</button>
+          <button class="filter" data-method="Grilling">Grilling</button>
+          <button class="filter" data-method="Boiling">Boiling</button>
+          <button class="filter" data-method="Slice">Slice</button>
+        </div>
+      </div>
+      <p class="result-count" id="result-count" aria-live="polite"></p>
+      <div class="recipe-grid" id="recipe-grid"></div>
+    </section>
+
+    <section class="use-cases" id="use-cases">
+      <div class="section-heading inverse">
+        <div><p class="eyebrow">DON'T WASTE THE GOOD INGREDIENTS</p><h2>Pack by purpose</h2></div>
+        <p>Registration and strength are different decisions. Discover dishes cheaply; upgrade only the food that changes your next fight.</p>
+      </div>
+      <div class="case-grid">
+        <article><span class="case-index">A</span><h3>Emergency revive</h3><p>Boil Honey + Herbs for Honey Tea. It revives at every recorded quality; higher quality restores more HP.</p><a href="#recipes" data-search="Honey Tea">View recipe →</a></article>
+        <article><span class="case-index">B</span><h3>Full-party cleanse</h3><p>Slice Vegetables + Herbs + Mushrooms for Assorted Salad and remove team status effects.</p><a href="#recipes" data-search="Assorted Salad">View recipe →</a></article>
+        <article><span class="case-index">C</span><h3>Boss preparation</h3><p>Boil Meat + Fish + Grains for Seafood Paella and raise the team's maximum HP before a long encounter.</p><a href="#recipes" data-search="Seafood Paella">View recipe →</a></article>
+      </div>
+    </section>
+
+    <section class="ingredients" id="ingredients">
+      <div><p class="eyebrow">SUPPLY RUN</p><h2>Three recorded merchants</h2></div>
+      <div class="merchant-list">
+        <article><span>ORBIS CASTLE</span><h3>Erena</h3><p>Rice · 3,000 Gold<br>Whitebloom Carrot · 1,000 Gold</p></article>
+        <article><span>MORNINGLIGHT FARM</span><h3>Harben</h3><p>Wheat · 3,000 Gold<br>Lantern Gourd · 1,000 Gold</p></article>
+        <article><span>SEAGULL VILLAGE</span><h3>Lizzie</h3><p>Shrimp Meat · 3,000 Gold<br>Fish Fillet · 1,000 Gold<br>Sand Crab · 1,000 Gold</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Independent fan-made field guide. Not affiliated with Hound13 Inc.</p>
+    <p>Game names and assets belong to their respective owners.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
